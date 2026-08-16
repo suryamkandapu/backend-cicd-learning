@@ -25,4 +25,8 @@ if (process.env.NODE_ENV !== "test") {
     .catch((err) => console.error("MongoDB Connection Error:", err));
 }
 
+app.get("/test", (req, res) => {
+  res.status(200).json({ message: "Test route is working!" });
+});
+
 export default app;
